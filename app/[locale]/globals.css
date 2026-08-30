@@ -1,0 +1,124 @@
+@import "tailwindcss";
+
+:root {
+  --ink: #083359;
+  --ink-soft: #4a6478;
+  --ink-faint: #8496a5;
+  --paper: #ffffff;
+  --paper-raised: #f5f7f8;
+  --paper-sunk: #eaeef0;
+  --line: rgba(8, 51, 89, 0.16);
+  --navy: #083359;
+  --navy-soft: #dce8ef;
+  --navy-deep: #052238;
+  --garnet: #a64669;
+  --garnet-soft: #f3dfe4;
+  --sky-top: #bfe0f5;
+  --sky-mid: #eaf4fa;
+  --radius: 2px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ink: #edeff1;
+    --ink-soft: #aebac3;
+    --ink-faint: #6e7c86;
+    --paper: #0c1720;
+    --paper-raised: #152430;
+    --paper-sunk: #081118;
+    --line: rgba(237, 239, 241, 0.16);
+    --navy: #6fa0c4;
+    --navy-soft: #1b3245;
+    --navy-deep: #bfdcef;
+    --garnet: #d98ba3;
+    --garnet-soft: #3a2530;
+    --sky-top: #12314a;
+    --sky-mid: #0c1e2c;
+  }
+}
+
+@theme inline {
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-ink-faint: var(--ink-faint);
+  --color-paper: var(--paper);
+  --color-paper-raised: var(--paper-raised);
+  --color-paper-sunk: var(--paper-sunk);
+  --color-line: var(--line);
+  --color-navy: var(--navy);
+  --color-navy-soft: var(--navy-soft);
+  --color-navy-deep: var(--navy-deep);
+  --color-garnet: var(--garnet);
+  --color-garnet-soft: var(--garnet-soft);
+  --color-sky-top: var(--sky-top);
+  --color-sky-mid: var(--sky-mid);
+
+  --font-disp: var(--font-poppins), system-ui, sans-serif;
+  --font-body: var(--font-newsreader), Georgia, "Times New Roman", serif;
+  --font-mono: var(--font-space-mono), ui-monospace, "SF Mono", monospace;
+  --font-hand: var(--font-caveat), cursive;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: var(--font-disp);
+  font-weight: 700;
+  text-wrap: balance;
+  margin: 0;
+  color: var(--ink);
+}
+
+p {
+  max-width: 62ch;
+  text-wrap: pretty;
+}
+
+::selection {
+  background: var(--navy-soft);
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--navy);
+}
+
+.rule {
+  height: 1px;
+  background: var(--line);
+  border: 0;
+}
