@@ -1,32 +1,68 @@
 "use client";
 
+import { useRef } from "react";
+import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import type { SiteContent } from "@/lib/content";
 
 export function Cover({ content }: { content: SiteContent }) {
+  const sectionRef = useRef<HTMLElement>(null);
+
+  // Raw pointer position as a 0–1 fraction of the section's box, smoothed
+  // with a spring so the light and the parallax trail the cursor gently
+  // instead of snapping to it.
+  const rawX = useMotionValue(0.5);
+  const rawY = useMotionValue(0.35);
+  const springConfig = { stiffness: 60, damping: 20, mass: 0.4 };
+  const x = useSpring(rawX, springConfig);
+  const y = useSpring(rawY, springConfig);
+
+  const spotlight = useTransform([x, y], ([xv, yv]: number[]) =>
+    `radial-gradient(38rem circle at ${xv * 100}% ${yv * 100}%, rgba(255,255,255,0.55), transparent 60%)`
+  );
+  const kickerX = useTransform(x, (v) => (v - 0.5) * -24);
+  const kickerY = useTransform(y, (v) => (v - 0.5) * -12);
+  const logoX = useTransform(x, (v) => (v - 0.5) * 14);
+  const logoY = useTransform(y, (v) => (v - 0.5) * 8);
+
+  function handlePointerMove(e: React.PointerEvent<HTMLElement>) {
+    const rect = sectionRef.current?.getBoundingClientRect();
+    if (!rect) return;
+    rawX.set((e.clientX - rect.left) / rect.width);
+    rawY.set((e.clientY - rect.top) / rect.height);
+  }
+
   return (
     <section
       id="top"
-      className="relative flex min-h-svh flex-col justify-between overflow-hidden border-b border-line"
-      style={{
-        background: `linear-gradient(180deg, var(--sky-top) 0%, var(--sky-mid) 62%, var(--paper) 100%)`,
-      }}
+      ref={sectionRef}
+      onPointerMove={handlePointerMove}
+      className="cover-sky relative flex min-h-svh flex-col justify-between overflow-hidden border-b border-line"
     >
-      <div className="mx-auto flex w-full max-w-6xl flex-1 flex-col items-center justify-center px-6 text-center">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
+      <motion.div
+        aria-hidden
+        className="pointer-events-none absolute inset-0 mix-blend-overlay"
+        style={{ backgroundImage: spotlight }}
+      />
+
+      <div className="relative mx-auto flex w-full max-w-6xl flex-1 flex-col items-center justify-center px-6 text-center">
+        <motion.img
           src="/images/cover-logo-animated.gif"
           alt="Marca animada de Gobe"
           className="mb-8 w-40 max-w-[45vw] mix-blend-multiply sm:w-56"
+          style={{ x: logoX, y: logoY }}
         />
-        <h1 className="font-disp text-[13vw] font-extrabold leading-none tracking-tight text-navy sm:text-[8vw]">
+        <motion.h1
+          className="font-disp text-[13vw] font-extrabold leading-none tracking-tight text-navy sm:text-[8vw]"
+          style={{ x: kickerX, y: kickerY }}
+        >
           {content.cover.kicker}
-        </h1>
-        <p className="mt-4 font-body text-lg italic text-ink-soft sm:text-xl">
+        </motion.h1>
+        <p className="mt-4 font-mono text-sm tracking-[0.02em] text-ink-soft sm:text-base">
           {content.cover.line}
         </p>
       </div>
 
-      <div className="border-t-2 border-ink px-6 py-3">
+      <div className="relative border-t-2 border-ink px-6 py-3">
         <div className="mx-auto flex max-w-6xl flex-wrap gap-x-0 gap-y-1">
           {content.cover.creditLabel.map((word, i) => (
             <span

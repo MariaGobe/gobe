@@ -1,14 +1,17 @@
+import Link from "next/link";
 import type { WorkItem } from "@/lib/content";
 import { Reveal } from "./Reveal";
 
 export function WorkList({
   id,
+  locale,
   eyebrow,
   heading,
   lede,
   items,
 }: {
   id?: string;
+  locale: string;
   eyebrow: string;
   heading: string;
   lede: string;
@@ -33,15 +36,41 @@ export function WorkList({
                 </div>
               </div>
               <div>
-                <h3 className="font-disp text-[clamp(22px,3vw,30px)]">{item.title}</h3>
+                <Link href={`/${locale}/work/${item.slug}`} className="group inline-block">
+                  <h3 className="font-disp text-[clamp(22px,3vw,30px)] transition-colors group-hover:text-navy">
+                    {item.title}
+                  </h3>
+                </Link>
                 <p className="mt-2 max-w-[56ch] text-[14.5px] text-ink-soft">
                   {item.description}
                 </p>
                 <div className="mt-3 font-mono text-[13.5px] leading-relaxed text-navy">
                   → {item.treatment}
                 </div>
+                <div className="mt-4 flex flex-wrap gap-x-5 gap-y-2">
+                  <Link
+                    href={`/${locale}/work/${item.slug}`}
+                    className="font-mono text-[12px] uppercase tracking-[0.06em] text-ink underline decoration-line underline-offset-4 transition-colors hover:text-navy hover:decoration-navy"
+                  >
+                    Ver caso →
+                  </Link>
+                  {item.links?.map((link) => (
+                    <a
+                      key={link.href}
+                      href={link.href}
+                      target="_blank"
+                      rel="noopener"
+                      className="font-mono text-[12px] uppercase tracking-[0.06em] text-ink underline decoration-line underline-offset-4 transition-colors hover:text-navy hover:decoration-navy"
+                    >
+                      {link.label} ↗
+                    </a>
+                  ))}
+                </div>
               </div>
-              <div className="order-first flex items-center justify-center overflow-hidden rounded-sm border border-line bg-paper-raised sm:order-none">
+              <Link
+                href={`/${locale}/work/${item.slug}`}
+                className="order-first flex items-center justify-center overflow-hidden rounded-sm border border-line bg-paper-raised sm:order-none"
+              >
                 {item.image ? (
                   // eslint-disable-next-line @next/next/no-img-element
                   <img
@@ -54,7 +83,7 @@ export function WorkList({
                     {item.imageAlt || "—"}
                   </div>
                 )}
-              </div>
+              </Link>
             </div>
           </Reveal>
         ))}

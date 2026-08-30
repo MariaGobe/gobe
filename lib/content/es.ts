@@ -16,7 +16,7 @@ export const es: SiteContent = {
   },
   cover: {
     kicker: "GOBE",
-    line: "Enter if you're curious.",
+    line: "GO + BE. Always in motion",
     hint: "desliza",
     creditLabel: ["COVER", "ISSUE 01", "PRÓXIMAMENTE", "2027"],
   },
@@ -44,6 +44,7 @@ export const es: SiteContent = {
         idx: "01",
         stamp: "Branding",
         title: "Sigesa",
+        slug: "sigesa",
         description:
           'Presentación puramente visual: logotipo, sistema de color clínico-corporativo, aplicaciones. Sin storytelling largo — dejamos que la identidad hable sola, en formato casi de "hoja de estilo" a pantalla completa.',
         treatment: "Galería de aplicaciones, scroll horizontal corto, cero texto de proceso.",
@@ -54,6 +55,7 @@ export const es: SiteContent = {
         idx: "02",
         stamp: "Brand + Product",
         title: "Zazú",
+        slug: "zazu",
         description:
           "El ejemplo perfecto de Gobe completo: marca + UX + producto digital + tecnología. Merece el formato más largo del portfolio — de la identidad a las pantallas reales de la plataforma privada de clientes.",
         treatment: 'Estudio de caso en dos actos: "la marca" → "la plataforma", con capturas de producto reales.',
@@ -64,6 +66,7 @@ export const es: SiteContent = {
         idx: "03",
         stamp: "Brand + Comms",
         title: "Horus ML",
+        slug: "horus-ml",
         description:
           "El proyecto que mejor comunica la filosofía de Gobe: la comunicación no fabrica personalidad, la revela. Se presenta con más texto que el resto.",
         treatment: "Cita/manifiesto corto integrado en la composición + piezas de marca y comunicación.",
@@ -74,17 +77,23 @@ export const es: SiteContent = {
         idx: "04",
         stamp: "Impacto social",
         title: "Inspira STEAM",
+        slug: "inspira-steam",
         description:
           "Un programa de mentoría liderado por Mari Luz Guenaga desde la Universidad de Deusto, que acerca la ciencia y la tecnología a chicas de 6º de primaria y 1º de la ESO, con mujeres profesionales de la ciencia y la tecnología como mentoras — trabajando directamente la brecha de género en STEAM. Llevamos años colaborando: rebranding completo, la web entera rehecha, un cuaderno impreso para el Día de la Niña y la Mujer en la Ciencia, y la edición de vídeos donde esas profesionales cuentan su propia experiencia. También rediseñamos la web de Galaxia, un proyecto hermano dentro del mismo universo STEAM.",
         treatment:
           "Mini caso de estudio con varios formatos a la vez (marca, web, pieza impresa, vídeo) — el arco de una colaboración de varios años.",
         image: "/images/work-inspirasteam.png",
         imageAlt: "Página de inicio de Inspira STEAM",
+        links: [
+          { label: "inspirasteam.net", href: "https://inspirasteam.net/" },
+          { label: "Galaxia", href: "https://galaxia.steam.eus/es/" },
+        ],
       },
       {
         idx: "05",
         stamp: "Rebranding",
         title: "Movilex",
+        slug: "movilex",
         description:
           "Rebranding industrial con propósito real (economía circular, reciclaje WEEE). Tono más serio y directo dentro del portfolio.",
         treatment: "Foco en el sistema de marca aplicado a entornos industriales/técnicos.",
@@ -102,6 +111,7 @@ export const es: SiteContent = {
         idx: "E1",
         stamp: "Producto propio",
         title: "Menta",
+        slug: "menta",
         description:
           'Educación + UX + personalización + IA. Plataforma propia de Gobe para itinerarios de aprendizaje y prácticas personalizadas. Etiquetada explícitamente como "By Gobe", nunca como cliente.',
         treatment: "Demo de producto en vivo (mockup de la interfaz real), sin logo de cliente.",
@@ -112,11 +122,18 @@ export const es: SiteContent = {
         idx: "E2",
         stamp: "Experimento IA",
         title: "GPT de Hacienda",
+        slug: "gpt-de-hacienda",
         description:
           "Un GPT personalizado para dudas sobre la Agencia Tributaria española, publicado en cuanto la tecnología lo permitió. Repercusión real en prensa (El Economista, Hipertextual, Applesfera, Softzone, Telecinco). Demuestra cómo Gobe usa IA para construir cosas útiles, no como buzzword.",
         treatment: "Recorte de prensa real (con enlaces) + el propio GPT embebido o enlazado.",
-        image: "",
-        imageAlt: "",
+        image: "/images/work-gpt-hacienda.png",
+        imageAlt: "Ficha del GPT Asesor Virtual en Agencia Tributaria Española",
+        links: [
+          {
+            label: "Abrir el GPT",
+            href: "https://chatgpt.com/g/g-84fADpCol-asesor-virtual-en-agencia-tributaria-espanola",
+          },
+        ],
       },
     ],
   },
@@ -151,10 +168,7 @@ export const es: SiteContent = {
   talk: {
     eyebrow: "Talk",
     heading: "Contacto sin fricción",
-    lede: "Un formulario de tres campos, sin CRM disfrazado de conversación. Todos los canales actuales se mantienen.",
-    formLabels: { name: "Nombre", email: "Email", message: "Mensaje", send: "Enviar →" },
-    formNote:
-      "Un único formulario de tres campos — un proyecto, una mentoría o cualquier otra cosa entran por el mismo sitio.",
+    lede: "Sin formularios ni CRM disfrazado de conversación. Un proyecto, una mentoría o cualquier otra cosa — escríbenos directamente por cualquiera de estos canales.",
     social: [
       { label: "Instagram", href: "https://www.instagram.com/gobesoluciones/" },
       { label: "LinkedIn", href: "https://www.linkedin.com/company/gobe-soluciones/" },

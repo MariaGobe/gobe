@@ -16,7 +16,7 @@ export const en: SiteContent = {
   },
   cover: {
     kicker: "GOBE",
-    line: "Enter if you're curious.",
+    line: "GO + BE. Always in motion",
     hint: "scroll",
     creditLabel: ["COVER", "ISSUE 01", "COMING SOON", "2027"],
   },
@@ -44,6 +44,7 @@ export const en: SiteContent = {
         idx: "01",
         stamp: "Branding",
         title: "Sigesa",
+        slug: "sigesa",
         description:
           'A purely visual presentation: logotype, a clinical-corporate colour system, applications. No long storytelling — we let the identity speak for itself, almost like a full-screen style sheet.',
         treatment: "An applications gallery, a short horizontal scroll, zero process copy.",
@@ -54,6 +55,7 @@ export const en: SiteContent = {
         idx: "02",
         stamp: "Brand + Product",
         title: "Zazú",
+        slug: "zazu",
         description:
           "The perfect example of full-scope Gobe: brand + UX + digital product + technology. It earns the portfolio's longest format — from the identity to the real screens of the private client platform.",
         treatment: 'A two-act case study: "the brand" → "the platform," with real product screenshots.',
@@ -64,6 +66,7 @@ export const en: SiteContent = {
         idx: "03",
         stamp: "Brand + Comms",
         title: "Horus ML",
+        slug: "horus-ml",
         description:
           "The project that best communicates Gobe's philosophy: communication doesn't manufacture personality, it reveals it. Presented with more copy than the rest.",
         treatment: "A short quote/manifesto built into the layout, plus brand and communications pieces.",
@@ -74,17 +77,23 @@ export const en: SiteContent = {
         idx: "04",
         stamp: "Social impact",
         title: "Inspira STEAM",
+        slug: "inspira-steam",
         description:
           "A mentoring programme led by Mari Luz Guenaga from the University of Deusto, bringing science and technology closer to 6th-grade and 1st-year-secondary girls, with women science and technology professionals as mentors — directly addressing the gender gap in STEAM. We've been collaborating for years: a full rebrand, the entire website rebuilt, a printed notebook for the Day of the Girl and Woman in Science, and video editing for the professionals sharing their own experience. We also redesigned the website for Galaxia, a sibling project in the same STEAM universe.",
         treatment:
           "A mini case study spanning several formats at once (brand, web, print, video) — the arc of a multi-year collaboration.",
         image: "/images/work-inspirasteam.png",
         imageAlt: "Inspira STEAM homepage",
+        links: [
+          { label: "inspirasteam.net", href: "https://inspirasteam.net/" },
+          { label: "Galaxia", href: "https://galaxia.steam.eus/es/" },
+        ],
       },
       {
         idx: "05",
         stamp: "Rebranding",
         title: "Movilex",
+        slug: "movilex",
         description:
           "An industrial rebrand with a real purpose (circular economy, WEEE recycling). A more serious, direct tone within the portfolio.",
         treatment: "Focused on the brand system as applied to industrial/technical environments.",
@@ -102,6 +111,7 @@ export const en: SiteContent = {
         idx: "E1",
         stamp: "Own product",
         title: "Menta",
+        slug: "menta",
         description:
           'Education + UX + personalisation + AI. Gobe\'s own platform for personalised learning paths and practice. Explicitly labelled "By Gobe," never as client work.',
         treatment: "A live product demo (a mockup of the real interface), no client logo.",
@@ -112,11 +122,18 @@ export const en: SiteContent = {
         idx: "E2",
         stamp: "AI experiment",
         title: "GPT de Hacienda",
+        slug: "gpt-de-hacienda",
         description:
           "A custom GPT for questions about the Spanish Tax Agency, published as soon as the technology allowed it. Real press coverage (El Economista, Hipertextual, Applesfera, Softzone, Telecinco). Shows how Gobe uses AI to build genuinely useful things, not as a buzzword.",
         treatment: "Real press clippings (with links) plus the GPT itself, embedded or linked.",
-        image: "",
-        imageAlt: "",
+        image: "/images/work-gpt-hacienda.png",
+        imageAlt: "GPT store card for Asesor Virtual en Agencia Tributaria Española",
+        links: [
+          {
+            label: "Open the GPT",
+            href: "https://chatgpt.com/g/g-84fADpCol-asesor-virtual-en-agencia-tributaria-espanola",
+          },
+        ],
       },
     ],
   },
@@ -151,10 +168,7 @@ export const en: SiteContent = {
   talk: {
     eyebrow: "Talk",
     heading: "Frictionless contact",
-    lede: "A three-field form, no CRM dressed up as conversation. Every current channel stays as-is.",
-    formLabels: { name: "Name", email: "Email", message: "Message", send: "Send →" },
-    formNote:
-      "A single three-field form — a project, a mentoring request, or anything else comes in through the same place.",
+    lede: "No forms, no CRM dressed up as conversation. A project, a mentoring request, or anything else — reach us directly through any of these channels.",
     social: [
       { label: "Instagram", href: "https://www.instagram.com/gobesoluciones/" },
       { label: "LinkedIn", href: "https://www.linkedin.com/company/gobe-soluciones/" },

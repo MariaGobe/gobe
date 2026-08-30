@@ -88,6 +88,26 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+.cover-sky {
+  background-image: linear-gradient(
+    180deg,
+    var(--sky-top) 0%,
+    var(--sky-mid) 62%,
+    var(--paper) 100%
+  );
+  background-size: 100% 180%;
+  animation: cover-sky-drift 26s ease-in-out infinite alternate;
+}
+
+@keyframes cover-sky-drift {
+  from {
+    background-position: 0% 0%;
+  }
+  to {
+    background-position: 0% 100%;
+  }
+}
+
 h1,
 h2,
 h3,

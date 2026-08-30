@@ -1,11 +1,18 @@
+export type WorkLink = {
+  label: string;
+  href: string;
+};
+
 export type WorkItem = {
   idx: string;
+  slug: string;
   stamp: string;
   title: string;
   description: string;
   treatment: string;
   image: string;
   imageAlt: string;
+  links?: WorkLink[];
 };
 
 export type TeamMember = {
@@ -68,8 +75,6 @@ export type SiteContent = {
     eyebrow: string;
     heading: string;
     lede: string;
-    formLabels: { name: string; email: string; message: string; send: string };
-    formNote: string;
     social: SocialLink[];
   };
   footer: {
