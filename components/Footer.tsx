@@ -1,3 +1,4 @@
+import Link from "next/link";
 import type { SiteContent } from "@/lib/content";
 
 export function Footer({ content }: { content: SiteContent }) {
@@ -7,7 +8,15 @@ export function Footer({ content }: { content: SiteContent }) {
         <span className="font-disp text-[clamp(24px,4vw,36px)] font-extrabold text-ink">
           {content.footer.line}
         </span>
-        <span className="font-mono text-[11px] text-ink-faint">{content.footer.meta}</span>
+        <div className="flex flex-col items-start gap-2 sm:items-end">
+          <span className="font-mono text-[11px] text-ink-faint">{content.footer.meta}</span>
+          <Link
+            href={`/${content.locale}/legal/privacidad`}
+            className="font-mono text-[11px] text-ink-faint underline decoration-line underline-offset-4 transition-colors hover:text-navy hover:decoration-navy"
+          >
+            {content.footer.privacyLabel}
+          </Link>
+        </div>
       </div>
     </footer>
   );

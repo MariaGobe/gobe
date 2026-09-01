@@ -19,10 +19,8 @@ export function Cover({ content }: { content: SiteContent }) {
   const spotlight = useTransform([x, y], ([xv, yv]: number[]) =>
     `radial-gradient(38rem circle at ${xv * 100}% ${yv * 100}%, rgba(255,255,255,0.55), transparent 60%)`
   );
-  const kickerX = useTransform(x, (v) => (v - 0.5) * -24);
-  const kickerY = useTransform(y, (v) => (v - 0.5) * -12);
-  const logoX = useTransform(x, (v) => (v - 0.5) * 14);
-  const logoY = useTransform(y, (v) => (v - 0.5) * 8);
+  const logoX = useTransform(x, (v) => (v - 0.5) * 18);
+  const logoY = useTransform(y, (v) => (v - 0.5) * 10);
 
   function handlePointerMove(e: React.PointerEvent<HTMLElement>) {
     const rect = sectionRef.current?.getBoundingClientRect();
@@ -48,16 +46,10 @@ export function Cover({ content }: { content: SiteContent }) {
         <motion.img
           src="/images/cover-logo-animated.gif"
           alt="Marca animada de Gobe"
-          className="mb-8 w-40 max-w-[45vw] mix-blend-multiply sm:w-56"
+          className="w-64 max-w-[65vw] mix-blend-multiply sm:w-[26rem]"
           style={{ x: logoX, y: logoY }}
         />
-        <motion.h1
-          className="font-disp text-[13vw] font-extrabold leading-none tracking-tight text-navy sm:text-[8vw]"
-          style={{ x: kickerX, y: kickerY }}
-        >
-          {content.cover.kicker}
-        </motion.h1>
-        <p className="mt-4 font-mono text-sm tracking-[0.02em] text-ink-soft sm:text-base">
+        <p className="mt-6 font-mono text-sm tracking-[0.02em] text-ink-soft sm:text-base">
           {content.cover.line}
         </p>
       </div>

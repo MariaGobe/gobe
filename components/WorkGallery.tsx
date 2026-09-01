@@ -1,18 +1,36 @@
+"use client";
+
+import { useMemo, useState } from "react";
 import Link from "next/link";
 import type { WorkItem } from "@/lib/content";
 import { Reveal } from "./Reveal";
+
+// Canonical vocabulary, in display order — matches the capabilities line
+// used elsewhere on the site so filter tags stay consistent as the
+// portfolio grows.
+const TAG_ORDER = [
+  "Branding",
+  "Digital",
+  "Graphic Design",
+  "Web",
+  "Apps",
+  "AI",
+  "Mentoring",
+  "Better processes",
+];
 
 function firstParagraph(text: string) {
   return text.split("\n\n")[0];
 }
 
-export function WorkList({
+export function WorkGallery({
   id,
   locale,
   eyebrow,
   heading,
   lede,
   items,
+  allLabel = "Todos",
 }: {
   id?: string;
   locale: string;
@@ -20,7 +38,17 @@ export function WorkList({
   heading: string;
   lede: string;
   items: WorkItem[];
+  allLabel?: string;
 }) {
+  const [activeTag, setActiveTag] = useState<string | null>(null);
+
+  const availableTags = useMemo(() => {
+    const present = new Set(items.flatMap((item) => item.tags ?? []));
+    return TAG_ORDER.filter((tag) => present.has(tag));
+  }, [items]);
+
+  const filtered = activeTag ? items.filter((item) => item.tags?.includes(activeTag)) : items;
+
   return (
     <section id={id} className="mx-auto max-w-6xl px-6 py-24 sm:py-32">
       <Reveal>
@@ -29,8 +57,40 @@ export function WorkList({
         <p className="mt-4 max-w-[60ch] text-ink-soft">{lede}</p>
       </Reveal>
 
-      <div className="mt-14 divide-y divide-line border-y border-line">
-        {items.map((item, i) => (
+      {availableTags.length > 1 && (
+        <Reveal delay={0.05}>
+          <div className="mt-10 flex flex-wrap gap-2">
+            <button
+              type="button"
+              onClick={() => setActiveTag(null)}
+              className={`rounded-full border px-4 py-1.5 font-mono text-[12px] uppercase tracking-[0.06em] transition-colors ${
+                activeTag === null
+                  ? "border-navy bg-navy text-paper"
+                  : "border-line text-ink-soft hover:border-navy hover:text-navy"
+              }`}
+            >
+              {allLabel}
+            </button>
+            {availableTags.map((tag) => (
+              <button
+                key={tag}
+                type="button"
+                onClick={() => setActiveTag(tag)}
+                className={`rounded-full border px-4 py-1.5 font-mono text-[12px] uppercase tracking-[0.06em] transition-colors ${
+                  activeTag === tag
+                    ? "border-navy bg-navy text-paper"
+                    : "border-line text-ink-soft hover:border-navy hover:text-navy"
+                }`}
+              >
+                {tag}
+              </button>
+            ))}
+          </div>
+        </Reveal>
+      )}
+
+      <div className="mt-10 divide-y divide-line border-y border-line">
+        {filtered.map((item, i) => (
           <Reveal key={item.idx} delay={i * 0.05}>
             <div className="grid grid-cols-1 gap-6 py-10 sm:grid-cols-[3rem_1fr_16rem] sm:gap-10">
               <div className="font-mono text-xs text-ink-faint">

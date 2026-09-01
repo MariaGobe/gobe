@@ -16,10 +16,13 @@ export function isLocale(value: string): value is Locale {
   return (locales as readonly string[]).includes(value);
 }
 
-/** All Selected Work + Experiments items, in display order, for a locale. */
+/**
+ * All Experiments ("Antes de nada") + Selected Work items, in on-page
+ * display order, for a locale — Experiments renders first on the homepage.
+ */
 export function allWorkItems(locale: string) {
   const content = getContent(locale);
-  return [...content.work.items, ...content.experiments.items];
+  return [...content.experiments.items, ...content.work.items];
 }
 
 export function findWorkItem(locale: string, slug: string) {
@@ -28,7 +31,7 @@ export function findWorkItem(locale: string, slug: string) {
   if (index === -1) return null;
   return {
     item: items[index],
-    section: index < getContent(locale).work.items.length ? ("work" as const) : ("experiments" as const),
+    section: index < getContent(locale).experiments.items.length ? ("experiments" as const) : ("work" as const),
     prev: items[index - 1] ?? null,
     next: items[index + 1] ?? null,
   };

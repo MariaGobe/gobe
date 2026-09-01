@@ -76,9 +76,11 @@ export default async function WorkCasePage(props: PageProps<"/[locale]/work/[slu
         </Reveal>
 
         <Reveal delay={0.1}>
-          <p className="mt-10 max-w-[65ch] text-lg leading-relaxed text-ink-soft">
-            {item.description}
-          </p>
+          <div className="mt-10 max-w-[65ch] space-y-5 text-lg leading-relaxed text-ink-soft">
+            {item.description.split("\n\n").map((paragraph, i) => (
+              <p key={i}>{paragraph}</p>
+            ))}
+          </div>
           <div className="mt-6 max-w-[65ch] font-mono text-sm leading-relaxed text-navy">
             → {item.treatment}
           </div>
@@ -96,6 +98,25 @@ export default async function WorkCasePage(props: PageProps<"/[locale]/work/[slu
                   {link.label} ↗
                 </a>
               ))}
+            </div>
+          )}
+
+          {item.press && item.press.length > 0 && (
+            <div className="mt-10 border-t border-line pt-6">
+              <span className="eyebrow">{locale === "es" ? "En prensa" : "In the press"}</span>
+              <div className="mt-4 flex flex-wrap gap-x-6 gap-y-2">
+                {item.press.map((link) => (
+                  <a
+                    key={link.href}
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener"
+                    className="font-mono text-[13px] text-ink-soft underline decoration-line underline-offset-4 transition-colors hover:text-navy hover:decoration-navy"
+                  >
+                    {link.label} ↗
+                  </a>
+                ))}
+              </div>
             </div>
           )}
         </Reveal>

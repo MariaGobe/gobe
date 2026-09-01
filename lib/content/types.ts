@@ -12,7 +12,10 @@ export type WorkItem = {
   treatment: string;
   image: string;
   imageAlt: string;
+  tags?: string[];
   links?: WorkLink[];
+  /** Press coverage — shown on the case-study page only, not on the card. */
+  press?: WorkLink[];
 };
 
 export type TeamMember = {
@@ -80,5 +83,14 @@ export type SiteContent = {
   footer: {
     line: string;
     meta: string;
+    privacyLabel: string;
+  };
+  legal: {
+    privacy: {
+      title: string;
+      updated: string;
+      intro: string;
+      sections: { heading: string; body: string }[];
+    };
   };
 };

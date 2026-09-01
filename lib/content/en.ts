@@ -22,8 +22,12 @@ export const en: SiteContent = {
   },
   home: {
     eyebrow: "Who we are",
-    heading: "Structure, critical thinking and sensibility.",
-    lede: "Gobe is a boutique design studio working at the intersection of culture, strategy and digital systems. We build identities and visual systems with structure, critical thinking and sensibility. We don't work from aggressive marketing. We don't sell empty aesthetics. We design systems built to last.",
+    heading: "Organized Chaos.",
+    // NOTE: per María & Antígona's copy handoff doc, this paragraph is kept
+    // identical (in Spanish) on both the ES and EN pages — only the heading
+    // above is locale-fixed in English. Flagged back to María to confirm
+    // this is intentional for the English page specifically.
+    lede: "Somos un estudio boutique de diseño que conecta cultura, estrategia y sistemas digitales para construir identidades a medida y lenguajes visuales con estructura, pensamiento crítico y espacio para la imperfección humana. Trabajamos desde el Antimarketing, con el tiempo y el criterio que cada proyecto necesita.",
     capabilities: [
       "Branding",
       "Digital",
@@ -50,6 +54,7 @@ export const en: SiteContent = {
         treatment: "An applications gallery, a short horizontal scroll, zero process copy.",
         image: "/images/work-sigesa.png",
         imageAlt: "Sigesa logotype on a blue background",
+        tags: ["Branding", "Graphic Design"],
       },
       {
         idx: "02",
@@ -61,6 +66,7 @@ export const en: SiteContent = {
         treatment: 'A two-act case study: "the brand" → "the platform," with real product screenshots.',
         image: "/images/work-zazu.png",
         imageAlt: "Zazú, Virtual Advisor — logotype and robot mascot",
+        tags: ["Branding", "Digital", "Apps"],
       },
       {
         idx: "03",
@@ -72,6 +78,7 @@ export const en: SiteContent = {
         treatment: "A short quote/manifesto built into the layout, plus brand and communications pieces.",
         image: "/images/work-horusml.png",
         imageAlt: "Horus.ml logotype on a dark blue gradient",
+        tags: ["Branding", "Graphic Design"],
       },
       {
         idx: "04",
@@ -84,6 +91,7 @@ export const en: SiteContent = {
           "A mini case study spanning several formats at once (brand, web, print, video) — the arc of a multi-year collaboration.",
         image: "/images/work-inspirasteam.png",
         imageAlt: "Inspira STEAM homepage",
+        tags: ["Branding", "Web", "Graphic Design"],
         links: [
           { label: "inspirasteam.net", href: "https://inspirasteam.net/" },
           { label: "Galaxia", href: "https://galaxia.steam.eus/es/" },
@@ -91,21 +99,22 @@ export const en: SiteContent = {
       },
       {
         idx: "05",
-        stamp: "Rebranding",
+        stamp: "Branding",
         title: "Movilex",
         slug: "movilex",
         description:
-          "An industrial rebrand with a real purpose (circular economy, WEEE recycling). A more serious, direct tone within the portfolio.",
-        treatment: "Focused on the brand system as applied to industrial/technical environments.",
+          "Movilex is a Spanish waste-management company that needed to open up to the European market. The initial brief was a rebrand, but before touching the logo we ran a benchmark of sector brands across Spain and Europe.\n\nThat analysis revealed a pattern: the entire sector reaches for the same visual code — green, leaves, nature — as a shortcut to look sustainable. It's a language worn out by overuse, and it wasn't helping Movilex compete in a wider, more demanding market. So we proposed breaking with it: replacing green with blue, moving the brand away from the sector's usual greenwashing and towards a broader, more contemporary positioning, consistent with its ambition to grow beyond Spain.\n\nThe proposal didn't stop at a colour change — it meant rethinking how the entire sector presents itself, and it was exactly that approach that convinced the CEO.\n\nFrom there we developed a complete brand system: a new minimalist logotype, colour palette, iconography and photography direction, documented in a 113-page brandbook together with two sales dossiers. The system was applied across every real touchpoint of the operation — truck livery, uniforms, factories, offices and digital materials — implemented alongside the company's in-house team.\n\nBrand voice and narrative was developed by a verbal-branding specialist; all visual development, start to finish, was our own responsibility.",
+        treatment: "The entire recycling industry uses the same green. We proposed blue.",
         image: "/images/work-movilex.jpg",
         imageAlt: "Movilex signage on an industrial facade",
+        tags: ["Branding", "Graphic Design"],
       },
     ],
   },
   experiments: {
-    eyebrow: "Experiments / Own Projects",
-    heading: "What Gobe builds on its own initiative",
-    lede: 'A deliberately different zone from Selected Work: rawer, more lab-like. The implicit message is "nobody commissioned this from us."',
+    eyebrow: "Before Anything Else",
+    heading: "What Gobe builds",
+    lede: "We saw broken flows, paperwork nobody wants to deal with, learning that doesn't adapt to anyone. We use design to fix it.",
     items: [
       {
         idx: "E1",
@@ -113,10 +122,11 @@ export const en: SiteContent = {
         title: "Menta",
         slug: "menta",
         description:
-          'Education + UX + personalisation + AI. Gobe\'s own platform for personalised learning paths and practice. Explicitly labelled "By Gobe," never as client work.',
-        treatment: "A live product demo (a mockup of the real interface), no client logo.",
+          "María started Gobe and a PhD in Humanities and Communication at the University of Burgos almost at the same time, without planning it that way. The two ended up crossing paths: she needed a real way to assess whether someone was actually learning in an online environment, and that research question became Menta.\n\nAfter years working with companies and schools, we kept seeing the same problem: internship tracks run on spreadsheets, lost emails, follow-up nobody did well. Menta centralises all of that — tracks, follow-up, evaluation — and uses AI to adapt to each person instead of treating everyone the same.\n\nIt's not just a management tool. Internships and training are, for many students, the first real door into the job market — and when that process is badly managed, the person loses out, not the company. Menta wants that door to open better: less admin load for tutors and training leads, more real time for supporting the person who's learning.\n\nIt already has a working MVP, in pilot testing with real companies. By Gobe, by no one else.",
+        treatment: "Internships didn't have to be a mess of spreadsheets and stray emails.",
         image: "/images/work-menta.png",
         imageAlt: "Menta login screen",
+        tags: ["Digital", "Apps", "AI", "Better processes"],
       },
       {
         idx: "E2",
@@ -124,14 +134,41 @@ export const en: SiteContent = {
         title: "GPT de Hacienda",
         slug: "gpt-de-hacienda",
         description:
-          "A custom GPT for questions about the Spanish Tax Agency, published as soon as the technology allowed it. Real press coverage (El Economista, Hipertextual, Applesfera, Softzone, Telecinco). Shows how Gobe uses AI to build genuinely useful things, not as a buzzword.",
-        treatment: "Real press clippings (with links) plus the GPT itself, embedded or linked.",
+          "María, who leads Gobe, got tired of losing hours deciphering letters from the Spanish Tax Agency that nobody understands on the first read. Instead of paying an accountant, she did what she knows how to do: she built a GPT that translates Hacienda's jargon into plain Spanish, for free, and posted about it on LinkedIn. Within days, more than 25,000 people were already using it, and several outlets picked it up on their own, unprompted. Then came a call from Telefónica's cybersecurity department, on behalf of the Tax Agency, asking her to take it down. We adapted it without losing what mattered: it stayed free, and we never tried to sell it to anyone. It's still proof that solving a real problem outweighs any campaign.",
+        treatment: "They asked us to take it down — not the Tax Agency, Telefónica, on its behalf.",
         image: "/images/work-gpt-hacienda.png",
         imageAlt: "GPT store card for Asesor Virtual en Agencia Tributaria Española",
+        tags: ["AI", "Digital", "Better processes"],
         links: [
           {
             label: "Open the GPT",
             href: "https://chatgpt.com/g/g-84fADpCol-asesor-virtual-en-agencia-tributaria-espanola",
+          },
+          {
+            label: "YouTube interview",
+            href: "https://www.youtube.com/watch?v=zQ0C4xb_jtg",
+          },
+        ],
+        press: [
+          {
+            label: "El Confidencial",
+            href: "https://www.elconfidencial.com/tecnologia/2024-11-15/historia-maria-disenadora-chatbot-openai-renta_4002345/",
+          },
+          {
+            label: "Genbeta",
+            href: "https://www.genbeta.com/inteligencia-artificial/disenadora-creo-chatgpt-hacienda-ahora-agencia-tributaria-le-ha-solicitado-que-elimine",
+          },
+          {
+            label: "Pymes y Autónomos",
+            href: "https://www.pymesyautonomos.com/fiscalidad-y-contabilidad/crean-agente-chatgpt-especialista-aeat-hacienda-obliga-a-cerrarlo-a-pocas-horas",
+          },
+          {
+            label: "El Economista",
+            href: "https://www.eleconomista.es/tecnologia/noticias/13299629/04/25/crean-un-chatgpt-capaz-de-responder-a-cualquier-duda-sobre-la-agencia-tributaria-es-gratis-y-funciona-las-24-horas.html",
+          },
+          {
+            label: "Xataka Móvil",
+            href: "https://www.xatakamovil.com/movil-y-sociedad/usuario-creo-chatgpt-hacienda-agencia-tributaria-pide-elimine-todavia-puedes-usarlo-tu-movil-asi-facil",
           },
         ],
       },
@@ -145,21 +182,21 @@ export const en: SiteContent = {
       {
         name: "María González",
         role: "Founder — Digital & UX",
-        bio: "A unicorn: she can use any design tool — vector, 3D, code — and ship final pieces at full speed.",
+        bio: "A unicorn: she masters any design tool [vector, 3D, code] and stays involved until the end. Gobe, Menta and the GPT de Hacienda were born in her head — she thought them up, built them, and carried them through until they existed. She isn't afraid of uncertainty. Wherever there's a problem, she finds the way out.",
         linkedin: "https://www.linkedin.com/in/mariagonzalezdebenito/",
         photo: "/images/team-maria.jpg",
       },
       {
         name: "Elena González",
         role: "Project Manager — USA",
-        bio: "The manager of managers. She organises, solves, creates. Experience leading teams, working in the United States — she's the one who brings order to our chaos.",
+        bio: "The manager of managers. She organises, solves, creates, and brings order to our chaos. She has designed campaigns for major brands and taken startups all the way to international accelerators. She has her finger on the pulse of today's visual culture and leads teams in the US with that same instinct: firm when it counts, approachable always.",
         linkedin: "https://www.linkedin.com/in/elena-gonci/",
         photo: "/images/team-elena.jpg",
       },
       {
         name: "Antígona Corral",
         role: "Art & Visual Concepts",
-        bio: "Art and conceptualisation. A voracious reader, full of artistic references — she's the one who brings coherence, references and a distinctive touch to every project.",
+        bio: "Art and conceptualisation. The one who looks twice before drawing. She led brand image for a major company, and now brings that same eye to Gobe. She finds the why behind every stroke, and the touch that makes every project one of a kind.",
         linkedin: "https://www.linkedin.com/in/antigonacg/",
         photo: "/images/team-antigona.jpg",
       },
@@ -182,5 +219,48 @@ export const en: SiteContent = {
   footer: {
     line: "GOBE",
     meta: "GO + BE = Always in motion",
+    privacyLabel: "Privacy",
+  },
+  legal: {
+    privacy: {
+      title: "Privacy Policy",
+      updated: "Last updated: September 2026",
+      intro:
+        "This page summarises how we handle personal data in relation to this website and direct contact with Gobe. It's a plain-language summary of our internal Data Protection & Security Policy, externally audited; it isn't a substitute for legal advice.",
+      sections: [
+        {
+          heading: "Data controller",
+          body: "GOBE SOLUCIONES Y CONSULTORÍA, S.L. — Spanish tax ID (NIF) B72509169, registered at Avenida de Burgos nº 26, 20036 Madrid, Spain. Legal representative: María González de Benito.",
+        },
+        {
+          heading: "Data Protection Officer",
+          body: "Under Article 37.1 GDPR and Article 34.1 of Spain's LOPDGDD, Gobe is not required to appoint a Data Protection Officer and has not appointed one. For any privacy question, you can write to us at info@gobesoluciones.com.",
+        },
+        {
+          heading: "What we process, and why",
+          body: "This website has no forms that collect personal data. When you contact us by email or social media, we process only the data you provide yourself (for example, your name and email address) to handle your request and reply to you.",
+        },
+        {
+          heading: "Legal basis",
+          body: "The legal basis is taking pre-contractual steps at your request (when you write to us about a possible project or collaboration) and, where applicable, compliance with legal obligations tied to administrative, tax and accounting management.",
+        },
+        {
+          heading: "Retention",
+          body: "We keep data for as long as needed to handle your request and, where applicable, for the periods required by tax and commercial regulations.",
+        },
+        {
+          heading: "Recipients",
+          body: "We do not share your data with third parties, except where legally required.",
+        },
+        {
+          heading: "Your rights",
+          body: "You can exercise your rights of access, rectification, erasure, objection, restriction of processing and portability by writing to info@gobesoluciones.com. You also have the right to lodge a complaint with the Spanish Data Protection Agency (AEPD, www.aepd.es) if you believe the processing doesn't comply with applicable rules.",
+        },
+        {
+          heading: "Cookies",
+          body: "This website does not use analytics, advertising, or tracking cookies.",
+        },
+      ],
+    },
   },
 };
