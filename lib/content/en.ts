@@ -122,11 +122,12 @@ export const en: SiteContent = {
         title: "Menta",
         slug: "menta",
         description:
-          "María started Gobe and a PhD in Humanities and Communication at the University of Burgos almost at the same time, without planning it that way. The two ended up crossing paths: she needed a real way to assess whether someone was actually learning in an online environment, and that research question became Menta.\n\nAfter years working with companies and schools, we kept seeing the same problem: internship tracks run on spreadsheets, lost emails, follow-up nobody did well. Menta centralises all of that — tracks, follow-up, evaluation — and uses AI to adapt to each person instead of treating everyone the same.\n\nIt's not just a management tool. Internships and training are, for many students, the first real door into the job market — and when that process is badly managed, the person loses out, not the company. Menta wants that door to open better: less admin load for tutors and training leads, more real time for supporting the person who's learning.\n\nIt already has a working MVP, in pilot testing with real companies. By Gobe, by no one else.",
+          "María started Gobe and a PhD in Humanities and Communication at the University of Burgos almost at the same time, without planning it that way. The two ended up crossing paths: she needed a real way to assess whether someone was actually learning in an online environment, and that research question became Menta.\n\nAfter years working with companies and schools, we kept seeing the same problem: internship tracks run on spreadsheets, lost emails, follow-up nobody did well. Menta centralises all of that — tracks, follow-up, evaluation — and uses AI to adapt to each person instead of treating everyone the same.\n\nIt's not just a management tool. Internships and training are, for many students, the first real door into the job market — and when that process is badly managed, the person loses out, not the company. Menta wants that door to open better: less admin load for tutors and training leads, more real time for supporting the person who's learning.\n\nIt's now live and available. By Gobe, by no one else.",
         treatment: "Internships didn't have to be a mess of spreadsheets and stray emails.",
         image: "/images/work-menta.png",
         imageAlt: "Menta login screen",
         tags: ["Digital", "Apps", "AI", "Better processes"],
+        links: [{ label: "Open Menta", href: "https://www.menta-gobe.com/" }],
       },
       {
         idx: "E2",
