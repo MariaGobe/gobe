@@ -19,6 +19,8 @@ const TAG_ORDER = [
   "Better processes",
 ];
 
+const PAGE_SIZE = 6;
+
 export function WorkGallery({
   id,
   locale,
@@ -27,6 +29,7 @@ export function WorkGallery({
   lede,
   items,
   allLabel = "Todos",
+  loadMoreLabel = "Cargar más",
 }: {
   id?: string;
   locale: string;
@@ -35,8 +38,10 @@ export function WorkGallery({
   lede: string;
   items: WorkItem[];
   allLabel?: string;
+  loadMoreLabel?: string;
 }) {
   const [activeTag, setActiveTag] = useState<string | null>(null);
+  const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
 
   const availableTags = useMemo(() => {
     const present = new Set(items.flatMap((item) => item.tags ?? []));
@@ -44,6 +49,12 @@ export function WorkGallery({
   }, [items]);
 
   const filtered = activeTag ? items.filter((item) => item.tags?.includes(activeTag)) : items;
+  const visible = filtered.slice(0, visibleCount);
+
+  function selectTag(tag: string | null) {
+    setActiveTag(tag);
+    setVisibleCount(PAGE_SIZE);
+  }
 
   return (
     <section id={id} className="mx-auto max-w-6xl px-6 py-24 sm:py-32">
@@ -58,7 +69,7 @@ export function WorkGallery({
           <div className="mt-10 flex flex-wrap gap-2">
             <button
               type="button"
-              onClick={() => setActiveTag(null)}
+              onClick={() => selectTag(null)}
               className={`rounded-full border px-4 py-1.5 font-mono text-[12px] uppercase tracking-[0.06em] transition-colors ${
                 activeTag === null
                   ? "border-navy bg-navy text-paper"
@@ -71,7 +82,7 @@ export function WorkGallery({
               <button
                 key={tag}
                 type="button"
-                onClick={() => setActiveTag(tag)}
+                onClick={() => selectTag(tag)}
                 className={`rounded-full border px-4 py-1.5 font-mono text-[12px] uppercase tracking-[0.06em] transition-colors ${
                   activeTag === tag
                     ? "border-navy bg-navy text-paper"
@@ -86,7 +97,7 @@ export function WorkGallery({
       )}
 
       <div className="mt-10 grid grid-cols-1 gap-8 sm:grid-cols-2 sm:gap-8 lg:grid-cols-3">
-        {filtered.map((item, i) => (
+        {visible.map((item, i) => (
           <Reveal key={item.idx} delay={(i % 6) * 0.05}>
             <div className="flex h-full flex-col overflow-hidden rounded-sm border border-line">
               <Link
@@ -148,6 +159,18 @@ export function WorkGallery({
           </Reveal>
         ))}
       </div>
+
+      {visibleCount < filtered.length && (
+        <div className="mt-10 flex justify-center">
+          <button
+            type="button"
+            onClick={() => setVisibleCount((c) => c + PAGE_SIZE)}
+            className="rounded-full border border-line px-6 py-2.5 font-mono text-[12px] uppercase tracking-[0.06em] text-ink-soft transition-colors hover:border-navy hover:text-navy"
+          >
+            {loadMoreLabel}
+          </button>
+        </div>
+      )}
     </section>
   );
 }

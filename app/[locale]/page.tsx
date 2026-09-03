@@ -35,6 +35,7 @@ export default async function LocalePage(props: PageProps<"/[locale]">) {
           lede={content.work.lede}
           items={content.work.items}
           allLabel={locale === "es" ? "Todos" : "All"}
+          loadMoreLabel={locale === "es" ? "Cargar más" : "Load more"}
         />
         <Studio id="studio" content={content} />
         <Talk id="talk" content={content} />
