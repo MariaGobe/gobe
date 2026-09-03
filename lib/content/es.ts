@@ -284,7 +284,7 @@ export const es: SiteContent = {
   studio: {
     eyebrow: "Studio",
     heading: "Tres personas, no un organigrama",
-    lede: 'Formato de "ficha" editorial en vez de bio corporativa: retrato real en blanco y negro, rol, una frase con voz propia. Sin foto de stock.',
+    lede: "Somos un equipo experto que mantiene una comunicación directa con nuestros clientes. No solo pensamos el proyecto, también lo diseñamos.",
     team: [
       {
         name: "María González",
@@ -312,7 +312,7 @@ export const es: SiteContent = {
   talk: {
     eyebrow: "Talk",
     heading: "Contacto sin fricción",
-    lede: "Sin formularios ni CRM disfrazado de conversación. Un proyecto, una mentoría o cualquier otra cosa — escríbenos directamente por cualquiera de estos canales.",
+    lede: "Si tienes una idea o proyecto, estamos aquí:",
     social: [
       { label: "Instagram", href: "https://www.instagram.com/gobesoluciones/" },
       { label: "LinkedIn", href: "https://www.linkedin.com/company/gobe-soluciones/" },

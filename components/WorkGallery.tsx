@@ -19,10 +19,6 @@ const TAG_ORDER = [
   "Better processes",
 ];
 
-function firstParagraph(text: string) {
-  return text.split("\n\n")[0];
-}
-
 export function WorkGallery({
   id,
   locale,
@@ -111,21 +107,24 @@ export function WorkGallery({
                 )}
               </Link>
               <div className="flex flex-1 flex-col p-6">
-                <div className="flex items-center justify-between font-mono text-xs text-ink-faint">
-                  <span>{item.idx}</span>
-                  <span className="rounded-full border border-line px-2 py-1 text-[10px] uppercase tracking-[0.06em] text-navy">
-                    {item.stamp}
-                  </span>
-                </div>
-                <Link href={`/${locale}/work/${item.slug}`} className="group mt-3 inline-block">
+                <Link href={`/${locale}/work/${item.slug}`} className="group inline-block">
                   <h3 className="font-disp text-[clamp(19px,2.4vw,23px)] transition-colors group-hover:text-navy">
                     {item.title}
                   </h3>
                 </Link>
-                <p className="mt-2 flex-1 text-[14px] text-ink-soft">
-                  {firstParagraph(item.description)}
-                </p>
-                <div className="mt-4 flex flex-wrap gap-x-4 gap-y-2">
+                {item.tags && item.tags.length > 0 && (
+                  <div className="mt-3 flex flex-wrap gap-1.5">
+                    {item.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="rounded-full border border-line px-2 py-1 text-[10px] uppercase tracking-[0.06em] text-navy"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                )}
+                <div className="mt-auto flex flex-wrap gap-x-4 gap-y-2 pt-5">
                   <Link
                     href={`/${locale}/work/${item.slug}`}
                     className="font-mono text-[12px] uppercase tracking-[0.06em] text-ink underline decoration-line underline-offset-4 transition-colors hover:text-navy hover:decoration-navy"

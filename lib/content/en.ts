@@ -288,7 +288,7 @@ export const en: SiteContent = {
   studio: {
     eyebrow: "Studio",
     heading: "Three people, not an org chart",
-    lede: "An editorial 'profile card' format instead of a corporate bio: a real black-and-white portrait, a role, one line in their own voice. No stock photography.",
+    lede: "We're an expert team that keeps direct communication with our clients. We don't just think the project through — we design it too.",
     team: [
       {
         name: "María González",
@@ -316,7 +316,7 @@ export const en: SiteContent = {
   talk: {
     eyebrow: "Talk",
     heading: "Frictionless contact",
-    lede: "No forms, no CRM dressed up as conversation. A project, a mentoring request, or anything else — reach us directly through any of these channels.",
+    lede: "If you have an idea or a project, we're here:",
     social: [
       { label: "Instagram", href: "https://www.instagram.com/gobesoluciones/" },
       { label: "LinkedIn", href: "https://www.linkedin.com/company/gobe-soluciones/" },
