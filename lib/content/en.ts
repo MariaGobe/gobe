@@ -55,7 +55,6 @@ export const en: SiteContent = {
         image: "/images/work-sigesa.png",
         imageAlt: "Sigesa logotype",
         tags: ["Branding", "Graphic Design"],
-        links: [{ label: "Brand center", href: "/sigesa/centro-de-marca/index.html" }],
       },
       {
         idx: "02",
