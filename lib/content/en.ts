@@ -194,6 +194,12 @@ export const en: SiteContent = {
         imageAlt: "Peticlín logotype, a balloon dog",
         tags: ["Branding", "Mentoring"],
         links: [{ label: "peticlin.com", href: "https://www.peticlin.com/" }],
+        gallery: [
+          {
+            src: "/images/work-peticlin-brand-guidelines.jpg",
+            alt: "Peticlín brand guidelines: logo, seal, colors and typography",
+          },
+        ],
       },
       {
         idx: "13",

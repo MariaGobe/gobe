@@ -101,6 +101,20 @@ export default async function WorkCasePage(props: PageProps<"/[locale]/work/[slu
             </div>
           )}
 
+          {item.gallery && item.gallery.length > 0 && (
+            <div className="mt-10 space-y-6">
+              {item.gallery.map((img) => (
+                <div
+                  key={img.src}
+                  className="overflow-hidden rounded-sm border border-line bg-paper-raised"
+                >
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src={img.src} alt={img.alt} className="w-full object-cover" />
+                </div>
+              ))}
+            </div>
+          )}
+
           {item.press && item.press.length > 0 && (
             <div className="mt-10 border-t border-line pt-6">
               <span className="eyebrow">{locale === "es" ? "En prensa" : "In the press"}</span>

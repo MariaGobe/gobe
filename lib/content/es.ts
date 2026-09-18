@@ -190,6 +190,12 @@ export const es: SiteContent = {
         imageAlt: "Logotipo de Peticlín, un perro de globo",
         tags: ["Branding", "Mentoring"],
         links: [{ label: "peticlin.com", href: "https://www.peticlin.com/" }],
+        gallery: [
+          {
+            src: "/images/work-peticlin-brand-guidelines.jpg",
+            alt: "Guía de marca de Peticlín: logotipo, sello, colores y tipografía",
+          },
+        ],
       },
       {
         idx: "13",

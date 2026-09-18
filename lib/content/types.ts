@@ -16,6 +16,8 @@ export type WorkItem = {
   links?: WorkLink[];
   /** Press coverage — shown on the case-study page only, not on the card. */
   press?: WorkLink[];
+  /** Extra images (e.g. brand guidelines sheets) — shown on the case-study page only, not on the card. */
+  gallery?: { src: string; alt: string }[];
 };
 
 export type TeamMember = {
