@@ -188,11 +188,12 @@ export const en: SiteContent = {
         title: "Peticlín",
         slug: "peticlin",
         description:
-          "Branding + mentoring: in a two-hour online working session, we developed an effective brand image that communicated its values, along with a basic brand manual to start producing communication pieces quickly.",
-        treatment: "A whole brand, solved in a two-hour session.",
+          "I met Henar, the creator of Peticlín, at a Santander X Explorer edition. We crossed paths in a few talks and WhatsApp groups and hit it off right away.\n\nShe needed a brand image — logo, color palette, typography — to keep moving her project forward, but couldn't afford to hire that out at such an early stage. I had several projects running and can't always work for free, so I offered her something different: a two-hour \"guerrilla branding\" workshop, just the two of us. She sent over references and ideas, I looked into a few things too, and on the day it felt more like a virtual coffee between friends than a work session. We shared a Figma file and came out with a logo, an icon, some fonts and a color palette.\n\nFrom that small base, Henar — who's sharp with Figma and Canva and has a great eye — built every piece herself: social posts, stories, stickers, merchandise. She's grown a community that's now in the thousands. We're still friends, and watching her project take off at this speed is a joy.",
+        treatment: "A guerrilla branding workshop between friends, solved in two hours.",
         image: "/images/work-peticlin.png",
         imageAlt: "Peticlín logotype, a balloon dog",
         tags: ["Branding", "Mentoring"],
+        links: [{ label: "peticlin.com", href: "https://www.peticlin.com/" }],
       },
       {
         idx: "13",

@@ -184,11 +184,12 @@ export const es: SiteContent = {
         title: "Peticlín",
         slug: "peticlin",
         description:
-          "Branding + mentoría: en una sesión de trabajo online de dos horas, desarrollamos una imagen de marca efectiva que comunicara sus valores, junto con un manual de marca básico para empezar a elaborar piezas de comunicación rápidamente.",
-        treatment: "Una marca entera, resuelta en una sesión de dos horas.",
+          "Conocí a Henar, la creadora de Peticlín, en una edición de Santander X Explorer. Coincidimos en algunas charlas y grupos de WhatsApp y conectamos enseguida.\n\nNecesitaba una imagen de marca —logo, paleta de colores, tipografía— para seguir avanzando con su proyecto, pero no podía permitirse contratar ese servicio en una fase tan inicial. Yo tenía varios proyectos en marcha y no siempre puedo trabajar gratis, así que le propuse un taller de dos horas para crear juntas un \"branding de guerrilla\". Cada una llevó referencias e ideas, compartimos un archivo de Figma, y la sesión supo más a café virtual entre amigas que a reunión de trabajo. De ahí salieron un logo, un icono, unas fuentes y una paleta de color.\n\nCon esa base, Henar —que domina Figma y Canva y tiene muy buen ojo— construyó ella misma todas sus piezas: posts, stories, pegatinas, merchandising. Ha levantado una comunidad que ya suma miles de seguidores. Seguimos siendo amigas, y ver crecer su proyecto a esta velocidad es una alegría.",
+        treatment: "Un taller de branding de guerrilla entre amigas, resuelto en dos horas.",
         image: "/images/work-peticlin.png",
         imageAlt: "Logotipo de Peticlín, un perro de globo",
         tags: ["Branding", "Mentoring"],
+        links: [{ label: "peticlin.com", href: "https://www.peticlin.com/" }],
       },
       {
         idx: "13",
