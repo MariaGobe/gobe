@@ -18,7 +18,7 @@ export const es: SiteContent = {
     kicker: "GOBE",
     line: "GO + BE. Always in motion",
     hint: "desliza",
-    creditLabel: ["COVER", "ISSUE 01", "PRÓXIMAMENTE", "2027"],
+    creditLabel: ["COVER", "ISSUE 01", "COVER DESIGN: GOBE GIRLS", "2027"],
   },
   home: {
     eyebrow: "Quiénes somos",
