@@ -41,7 +41,7 @@ export const en: SiteContent = {
   },
   work: {
     eyebrow: "Selected Work",
-    heading: "A different treatment for every project",
+    heading: "Projects",
     lede: "No project uses exactly the same template. The kind of work we did dictates how it's presented.",
     items: [
       {
@@ -294,7 +294,7 @@ export const en: SiteContent = {
   },
   studio: {
     eyebrow: "Studio",
-    heading: "Three people, not an org chart",
+    heading: "Team",
     lede: "We're an expert team that keeps direct communication with our clients. We don't just think the project through — we design it too.",
     team: [
       {
@@ -322,7 +322,7 @@ export const en: SiteContent = {
   },
   talk: {
     eyebrow: "Talk",
-    heading: "Frictionless contact",
+    heading: "Contact",
     lede: "If you have an idea or a project, we're here:",
     social: [
       { label: "Instagram", href: "https://www.instagram.com/gobesoluciones/" },

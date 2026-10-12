@@ -37,7 +37,7 @@ export const es: SiteContent = {
   },
   work: {
     eyebrow: "Selected Work",
-    heading: "Un tratamiento distinto para cada proyecto",
+    heading: "Proyectos",
     lede: "Ningún proyecto usa exactamente la misma plantilla. El tipo de trabajo que hicimos dicta cómo se presenta.",
     items: [
       {
@@ -290,7 +290,7 @@ export const es: SiteContent = {
   },
   studio: {
     eyebrow: "Studio",
-    heading: "Tres personas, no un organigrama",
+    heading: "Equipo",
     lede: "Somos un equipo experto que mantiene una comunicación directa con nuestros clientes. No solo pensamos el proyecto, también lo diseñamos.",
     team: [
       {
@@ -318,7 +318,7 @@ export const es: SiteContent = {
   },
   talk: {
     eyebrow: "Talk",
-    heading: "Contacto sin fricción",
+    heading: "Contacto",
     lede: "Si tienes una idea o proyecto, estamos aquí:",
     social: [
       { label: "Instagram", href: "https://www.instagram.com/gobesoluciones/" },
