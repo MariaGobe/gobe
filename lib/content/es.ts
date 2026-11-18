@@ -222,6 +222,33 @@ export const es: SiteContent = {
         tags: ["Web", "Digital", "Mentoring"],
         links: [{ label: "alumbrastore.com", href: "https://alumbrastore.com/" }],
       },
+      {
+        idx: "15",
+        stamp: "Branding",
+        title: "ARV",
+        slug: "arv",
+        description:
+          "Arrive es una compañía de software estadounidense que ha creado un sistema operativo con IA para despachos de contabilidad. ARV es su brazo operativo: firmas de contabilidad que operan entre sí bajo un mismo estándar, yendo más allá de la contabilidad hacia operaciones, marketing, tecnología, finanzas y M&A.\n\nPara ARV desarrollamos la identidad de marca completa: logotipo, sistema de color, tipografía, y su aplicación a redes sociales, plantillas de presentación y piezas impresas (tarjetas, camisetas, bolsas de tela), documentado todo en sus propias brand guidelines.\n\nEl logotipo es un único gesto: dos cuñas espejadas que comparten una diagonal, y que se leen como A, R y V al mismo tiempo — el nombre entero cabe en una sola forma. La paleta es casi monocroma (negro, grafito, blanco) con un verde que aparece solo una vez por composición, y una única tipografía, Open Sans, recorre todo el sistema para mantenerlo preciso y calmado.",
+        treatment: "Dos cuñas y una diagonal que se leen como A, R y V al mismo tiempo.",
+        image: "/images/work-arv.png",
+        imageAlt: "Logotipo de ARV sobre fondo negro",
+        tags: ["Branding", "Graphic Design"],
+        links: [{ label: "arvfirm.com", href: "https://arvfirm.com/" }],
+        gallery: [
+          {
+            src: "/images/work-arv-process.jpg",
+            alt: "Tablero de exploración del logotipo de ARV",
+          },
+          {
+            src: "/images/work-arv-logo-system.jpg",
+            alt: "Sistema del logotipo de ARV: lockup, versiones de color y tamaño mínimo",
+          },
+          {
+            src: "/images/work-arv-physical.jpg",
+            alt: "Aplicaciones físicas de ARV: camiseta, bolsa de tela y tarjeta de visita",
+          },
+        ],
+      },
     ],
   },
   experiments: {

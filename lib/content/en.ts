@@ -226,6 +226,33 @@ export const en: SiteContent = {
         tags: ["Web", "Digital", "Mentoring"],
         links: [{ label: "alumbrastore.com", href: "https://alumbrastore.com/" }],
       },
+      {
+        idx: "15",
+        stamp: "Branding",
+        title: "ARV",
+        slug: "arv",
+        description:
+          "Arrive is a US software company that built an AI operating system for accounting firms. ARV is its operational arm: accounting firms operating together under one standard, going beyond accounting into operations, marketing, technology, finance and M&A.\n\nFor ARV we built the full brand identity: logo, color system, typography, and its application across social media, presentation templates and printed pieces (business cards, T-shirts, tote bags), all documented in its own brand guidelines.\n\nThe mark is a single gesture: two mirrored wedges sharing one diagonal, reading as an A, an R and a V all at once — the whole name fits inside one shape. The palette stays almost monochrome (ink, graphite, white) with one green moment per layout, and a single typeface, Open Sans, carries the whole system, keeping it precise and calm.",
+        treatment: "Two wedges and one diagonal that read as A, R and V at once.",
+        image: "/images/work-arv.png",
+        imageAlt: "ARV logo on a black background",
+        tags: ["Branding", "Graphic Design"],
+        links: [{ label: "arvfirm.com", href: "https://arvfirm.com/" }],
+        gallery: [
+          {
+            src: "/images/work-arv-process.jpg",
+            alt: "ARV logo exploration board",
+          },
+          {
+            src: "/images/work-arv-logo-system.jpg",
+            alt: "ARV logo system: lockup, color versions and minimum size",
+          },
+          {
+            src: "/images/work-arv-physical.jpg",
+            alt: "ARV physical applications: T-shirt, tote bag and business card",
+          },
+        ],
+      },
     ],
   },
   experiments: {
