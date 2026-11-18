@@ -58,6 +58,10 @@ export const en: SiteContent = {
         links: [{ label: "arvfirm.com", href: "https://arvfirm.com/" }],
         gallery: [
           {
+            src: "/images/work-arv-family.jpg",
+            alt: "The Arrive and ARV brands side by side: Arrive, the software, and ARV, its operational arm",
+          },
+          {
             src: "/images/work-arv-process.jpg",
             alt: "ARV logo exploration board",
           },

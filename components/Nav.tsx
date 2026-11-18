@@ -2,11 +2,19 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import type { SiteContent } from "@/lib/content";
 
 export function Nav({ content }: { content: SiteContent }) {
   const [open, setOpen] = useState(false);
   const base = `/${content.locale}`;
+  const pathname = usePathname();
+
+  // Swap only the locale segment of the current path, so switching
+  // language from a case-study (or any) page stays on that same page
+  // instead of bouncing to the home section.
+  const targetLocale = content.locale === "es" ? "en" : "es";
+  const switchHref = pathname?.replace(/^\/[^/]+/, `/${targetLocale}`) || `/${targetLocale}`;
 
   const links = [
     { href: `${base}#work`, label: content.nav.work, n: "01" },
@@ -34,7 +42,7 @@ export function Nav({ content }: { content: SiteContent }) {
             </a>
           ))}
           <Link
-            href={content.nav.switchTo.href}
+            href={switchHref}
             className="rounded-full border border-line px-3 py-1 text-ink-soft transition-colors hover:border-navy hover:text-navy"
           >
             {content.nav.switchTo.label}
@@ -74,7 +82,7 @@ export function Nav({ content }: { content: SiteContent }) {
               </a>
             ))}
             <Link
-              href={content.nav.switchTo.href}
+              href={switchHref}
               className="mt-2 w-fit rounded-full border border-line px-3 py-1 text-[12px] text-ink-soft"
             >
               {content.nav.switchTo.label}
